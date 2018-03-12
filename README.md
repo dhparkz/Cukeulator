@@ -2,12 +2,10 @@
 
 이 프로젝트는 cucumber-jvm의 android example을 기초로 하여 Cucumber를 한국어 버전으로 변형시킨 프로젝트입니다.
 
-
 This project based On [cucuber-jvm](https://github.com/cucumber/cucumber-jvm) android example.
  
 This is the example test-project for the Cukeulator app for Android Studio 3.0+
 
- 
 
 ### Setup
 Features must be placed in `assets/features/`. Subdirectories are allowed.
@@ -66,15 +64,29 @@ adb shell am instrument -w cucumber.cukeulator.test/cucumber.cukeulator.test.Ins
 ### Using an Android Studio IDE
 1. Import the example to Android Studio: `File > Import Project`.
 2. Create a test run configuration:
-    1.  Run > Edit Configurations
+    1. Run > Edit Configurations
     2. Click `+` button and select Android Tests
     3. Specify test name: `CalculatorTest`
     4. Select module: `app`
     5. Enter a Specific instrumentation runner: `cucumber.cukeulator.test.Instrumentation`
     6. Click Ok
+    7. Start Run
+   		 ![Test Result](./images/testResult.png)
+   		 
+    8. The emulator would be run your tests.
+
+	    ![Emulator](./images/cucumberRunningSample.gif)
 
 ### Output
 Filter for the logcat tag `cucumber-android` in [DDMS](https://developer.android.com/tools/debugging/ddms.html).
+
+You can see the sample in [cucumber.html](cucumber.html/index.html)
+
+![](./images/cucumberReport.png)
+
+
+
+
 
 ### Using this project with locally built Cucumber-JVM
 See [app/build.gradle](app/build.gradle) under `dependencies`.  
