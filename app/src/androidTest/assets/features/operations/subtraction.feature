@@ -1,31 +1,30 @@
-Feature: Subtract two numbers
-  Calculate the difference of two numbers which consist of one or more digits
+# language: ko
 
-  Scenario Outline: Enter one digit per number and press =
-    Given I have a CalculatorActivity
-    When I press <num1>
-    And I press –
-    And I press <num2>
-    And I press =
-    Then I should see <delta> on the display
-
-  Examples:
+기능: 뺄셈
+  하나 이상의 자리로 구성된 두 숫자의 뺄셈를 계산합니다.
+  시나리오 개요: 한자리 숫자를 두개 입력하고 =를 누릅니다
+    먼저 CalculatorActivity를 실행한다
+    그리고 <num1>를 누른다
+    그리고 –를 누른다
+    그리고 <num2>를 누른다
+    그리고 =를 누른다
+    그러면 <delta>가 화면에 표시된다
+  예:
     | num1 | num2 | delta |
     | 0    | 0    | 0.0   |
     | 0    | 1    | -1.0  |
     | 1    | 2    | -1.0  |
 
-  Scenario Outline: Enter two digits per number and press =
-    Given I have a CalculatorActivity
-    When I press <num1>
-    When I press <num2>
-    And I press –
-    And I press <num3>
-    And I press <num4>
-    And I press =
-    Then I should see <delta> on the display
-
-  Examples:
+  시나리오 개요: 두자리 숫자를 두개 입력하고 =를 누릅니다.
+    먼저 CalculatorActivity를 실행한다
+    그리고 <num1>를 누른다
+    그리고 <num2>를 누른다
+    그리고 –를 누른다
+    그리고 <num3>를 누른다
+    그리고 <num4>를 누른다
+    그리고 =를 누른다
+    그러면 <delta>가 화면에 표시된다
+   예:
     | num1 | num2 | num3 | num4 | delta |
     | 2    | 2    | 2    | 2    | 0.0   |
     | 2    | 0    | 1    | 0    | 10.0  |

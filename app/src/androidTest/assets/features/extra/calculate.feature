@@ -1,20 +1,20 @@
-Feature: Calculate a result
-  Perform an arithmetic operation on two numbers using a mathematical operator
-  """The purpose of this feature is to illustrate how existing step-definitions
-  can be efficiently reused."""
+# language: ko
 
-  Scenario Outline: Enter a digit, an operator and another digit
-    Given I have a CalculatorActivity
-    When I press <num1>
-    And I press <op>
-    And I press <num2>
-    And I press =
-    Then I should see <result> on the display
+기능: 여러가지 산술계산
+  산술 연산자를 사용하여 두 숫자에 대한 산술 연산을 수행합니다.
+  """이 기능의 목적은 이미 정의된 step-definitions이 어떻게 효율적으로 재사용되는지 설명하는 것입니다."""
 
-  Examples:
-    | num1 | num2 | op | result   |
-    | 9    | 8    | +  | 17.0     |
-    | 7    | 6    | –  | 1.0      |
-    | 5    | 4    | x  | 20.0     |
-    | 3    | 2    | /  | 1.5      |
-    | 1    | 0    | /  | Infinity |
+  시나리오 개요: 숫자하나를 입력하고 산술연산자와 다른숫자를 입력합니다
+    먼저 CalculatorActivity를 실행한다
+    그리고 <num1>를 누른다
+    그리고 <op>를 누른다
+    그리고 <num2>를 누른다
+    그리고 =를 누른다
+    그러면 <result>가 화면에 표시된다
+    예:
+      | num1 | num2 | op | result   |
+      | 9    | 8    | +  | 17.0     |
+      | 7    | 6    | –  | 1.0      |
+      | 5    | 4    | x  | 20.0     |
+      | 3    | 2    | /  | 1.5      |
+      | 1    | 0    | /  | Infinity |

@@ -8,9 +8,9 @@ import org.junit.Rule;
 import cucumber.api.CucumberOptions;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import cucumber.api.java.ko.그러면;
+import cucumber.api.java.ko.그리고;
+import cucumber.api.java.ko.먼저;
 import cucumber.cukeulator.CalculatorActivity;
 import cucumber.cukeulator.R;
 
@@ -73,12 +73,12 @@ public class CalculatorActivitySteps {
         return rule.getActivity();
     }
 
-    @Given("^I have a CalculatorActivity$")
+    @먼저("^CalculatorActivity를 실행한다$")
     public void I_have_a_CalculatorActivity() {
         assertNotNull(getActivity());
     }
 
-    @When("^I press (\\d)$")
+    @그리고("^(\\d)를 누른다$")
     public void I_press_d(final int d) {
         switch (d) {
             case 0:
@@ -114,7 +114,7 @@ public class CalculatorActivitySteps {
         }
     }
 
-    @When("^I press ([+–x\\/=])$")
+    @그리고("^([+–x\\/=])를 누른다$")
     public void I_press_op(final char op) {
         switch (op) {
             case '+':
@@ -135,7 +135,7 @@ public class CalculatorActivitySteps {
         }
     }
 
-    @Then("^I should see (\\S+) on the display$")
+    @그러면("^(\\S+)가 화면에 표시된다$")
     public void I_should_see_s_on_the_display(final String s) {
         onView(withId(R.id.txt_calc_display)).check(matches(withText(s)));
     }
